@@ -1,53 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/png" href="flashcard.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Flashcards</title>
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Flashcards</title>
 </head>
 <body>
 
-  <main>
+  <header id="app-header">
+    <h1>Flashcards</h1>
     
+    <nav>
+      <button id="app-form-show">Show</button>
+      <button id="app-main-reset">Reset</button>
+    </nav>
+  </header>
+
+  <div id="app-form">
     <header>
-      <div class="container">
-        <div id="header">
-          <h1>Flashcards</h1>
-          <div>
-            <button id="show_card_box">Add Card</button>
-            <button id="delete_cards">Del Cards</button>
-          </div>
-        </div>
-      </div>
+      <h2>New Flashcard</h2>
+      <i id="app-form-hide" class="bx bxs-x-circle"></i>
     </header>
+
+    <div>
+      <label for="app-form-question">Question</label>
+      <input id="app-form-question" spellcheck="true" required/>
+    </div>
     
-    <section>
-      <div class="container">
-        <div id="create_card">
-          <h2>Create Flashcard</h2>
-          <label for="question">Question</label>
-          <textarea id="question" maxlength="280"></textarea>
-          <label for="answer" maxlength="280">Answer</label>
-          <br>
-          <textarea id="answer"></textarea>
-          <div>
-            <button id="save_card">Save</button> <button id="close_card_box">Close</button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div>  
+      <label for="app-form-answer">Answer</label>
+      <input id="app-form-answer" spellcheck="true" required/>
+    </div>
+    
+    <footer>
+      <label for="app-form-save">Save</label>
+      <button id="app-form-save">Flash Card</button>
+    </footer>
+  </div>
 
-    <section>
-      <div class="container">
-        <div id="flashcards"></div>
-      </div>
-    </section>
-
-  </main>
+  <main></main>
   
   <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </body>
 </html>
