@@ -1,72 +1,86 @@
-var contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+buildFlashcard = (element, index) => {
+  const flashcard = document.createElement("article");
+  const wrapper = document.createElement("section");
+  const header = document.createElement("header");
+  const remove = document.createElement("i");
+  const answer = document.createElement("p");
+  const question = document.createElement("p");
 
-document.getElementById("save_card").addEventListener("click", () => {
-  addFlashcard();
-});
-
-document.getElementById("delete_cards").addEventListener("click", () => {
-  localStorage.clear();
-  flashcards.innerHTML = '';
-  contentArray = [];
-});
-
-document.getElementById("show_card_box").addEventListener("click", () => {
-  document.getElementById("create_card").style.display = "block";
-});
-
-document.getElementById("close_card_box").addEventListener("click", () => {
-  document.getElementById("create_card").style.display = "none";
-});
-
-flashcardMaker = (text, delThisIndex) => {
-  const flashcard = document.createElement("div");
-  const question = document.createElement('h2');
-  const answer = document.createElement('h2');
-  const del = document.createElement('i');
-
-  flashcard.className = 'flashcard';
-
-  question.setAttribute("style", "border-top:1px solid red; padding: 15px; margin-top:30px");
-  question.textContent = text.my_question;
-
-  answer.setAttribute("style", "text-align:center; display:none; color:red");
-  answer.textContent = text.my_answer;
-
-  del.className = "fas fa-minus";
-  del.addEventListener("click", () => {
-    contentArray.splice(delThisIndex, 1);
-    localStorage.setItem('items', JSON.stringify(contentArray));
+  remove.addEventListener("click", () => {
+    container.splice(index, 1);
+    localStorage.setItem("items", JSON.stringify(container));
     window.location.reload();
-  })
-
-  flashcard.appendChild(question);
-  flashcard.appendChild(answer);
-  flashcard.appendChild(del);
+  });
 
   flashcard.addEventListener("click", () => {
-    if(answer.style.display == "none")
-      answer.style.display = "block";
-    else
-      answer.style.display = "none";
-  })
+    wrapper.classList.toggle("flashcard-flip");
+  });
+  
+  question.textContent = element.question;
+  answer.textContent = element.answer;
+  
+  flashcard.className = "flashcard";
+  wrapper.className = "flashcard-wrapper"
+  header.className = "flashcard-header";
+  question.className = "flashcard-face flashcard-front";
+  answer.className = "flashcard-face flashcard-back";
+  remove.className = "bx bxs-x-circle";
 
-  document.querySelector("#flashcards").appendChild(flashcard);
+  header.appendChild(remove);
+  wrapper.appendChild(header);
+  wrapper.appendChild(question);
+  wrapper.appendChild(answer);
+  flashcard.appendChild(wrapper);
+  
+  document.querySelector("main").appendChild(flashcard);
 }
 
-contentArray.forEach(flashcardMaker);
-
-addFlashcard = () => {
-  const question = document.querySelector("#question");
-  const answer = document.querySelector("#answer");
+createFlashcard = () => {
+  const question = document.querySelector("#app-form-question");
+  const answer = document.querySelector("#app-form-answer");
 
   let flashcard_info = {
-    'my_question' : question.value,
-    'my_answer'  : answer.value
+    'question': question.value,
+    'answer': answer.value
   }
 
-  contentArray.push(flashcard_info);
-  localStorage.setItem('items', JSON.stringify(contentArray));
-  flashcardMaker(contentArray[contentArray.length - 1], contentArray.length - 1);
+  container.push(flashcard_info);
+  localStorage.setItem('items', JSON.stringify(container));
+  buildFlashcard(container[container.length - 1], container.length - 1);
   question.value = "";
   answer.value = "";
 }
+
+let container = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
+
+container.forEach(buildFlashcard);
+
+// display form
+document.
+  querySelector("#app-form-show").
+  addEventListener("click", () => {
+    document.querySelector("#app-form").style.display = "flex";
+  });
+
+// hide form
+document.
+  querySelector("#app-form-hide").
+  addEventListener("click", () => {
+    document.querySelector("#app-form").style.display = "none";
+  });
+
+// save form contents to local storage
+document.
+  querySelector("#app-form-save").
+  addEventListener("click", () => {
+    createFlashcard();
+  });
+
+// delete flashcards
+document.
+  querySelector("#app-main-reset").
+  addEventListener("click", () => {
+    localStorage.clear();
+    document.querySelector("main").innerHTML = '';
+    container = [];
+  });
