@@ -1,112 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
-*{
+:root {
+  --border-radius: 0.3125em; /* 5px */
+
+  --flashcard-background-color: rgb(50, 50, 50);
+  --flashcard-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+
+  --color-background: rgb(30, 30, 30);
+  --color-background-highlight: rgb(240, 240, 240);
+  --color: rgb(240, 240, 240);
+  --color-highlight: rgb(30, 30, 30);
+  --color-border: lightgray;
+  --color-border-highlight: rgb(75, 75, 75);
+  --color-caution: rgb(255, 0, 0);
+
+  --font-name: "Noto Sans Mono";
+  --font-family: "Noto Sans Mono", Monospace, Arial, Helvetica, Times;
+  --font-size-small: 0.75em; /* 12px */
+  --font-size-regular: 0.875em; /* 14px */
+  --font-size-header: 1em; /* 16px */
+
+  --screen-min-width: 48em; /* 768px */
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body{
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  background: whitesmoke;
+  background: var(--color-background);
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-regular);
 }
 
-button{
-  padding: 8px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  background: whitesmoke;
-}
-
-button:hover{
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.container{
-  width: 1280px;
-  margin: auto;
-}
-
-header{background-color: #fff;}
-
-#header{
-  display: flex;
-  justify-content: space-between;
+#app-header {
   align-items: center;
-  min-height: 70px;
-  padding: 0 20px;
-  background: #fff;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color);
+  display: flex;
+  left: 0;
+  min-height: 3.125em;
+  overflow: none;
+  padding: 0.3125em;
+  position: sticky;
+  top: 0;
 }
 
-#header button{
-  font-family: inherit;
-  border: 1px solid red;
+#app-header h1,
+#app-header nav {
+  flex: auto;
 }
 
-#create_card{
+#app-header h1 {
+  justify-content: start;
+}
+
+#app-header nav {
+  display: flex;
+  justify-content: end;
+}
+
+#app-header button {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color);
+  cursor: pointer;
+  margin: 5px;
+  outline: none;
+  padding: 10px;
+}
+
+#app-header button:hover{
+  background: var(--color-background-highlight);
+  color: var(--color-highlight);
+}
+
+#app-form {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--flashcard-box-shadow);
+  color: var(--color);
   display: none;
-  width: 370px;
+  flex-flow: column nowrap;
+  height: 210px;
   margin:auto;
-  padding: 20px;
-  margin-top: 10px;
-  background: whitesmoke;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 10px;
+  width: 370px;
 }
 
-#create_card h2{
-  color: black;
-  text-align: center;
+#app-form header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
-#create_card textarea{
-  width: 100%;
-  border-radius: 5px;
+#app-form header h2,
+#app-form header i {
+  flex: auto;
+}
+
+#app-form header h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app-form header i {
+  align-items: center;
+  display: flex;
+  flex: 0 0 10%;
+  height: 25px;
+  justify-content: center;
+  font-size: var(--font-size-header);
+  color: var(--color);
+}
+
+#app-form header i:hover {
+  color: var(--color-caution);
+}
+
+#app-form div,
+#app-form footer {
+  flex: auto;
+  overflow: hidden;
+}
+
+#app-form div input,
+#app-form footer button {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color);
   font-family: inherit;
-  border: 1px solid lightgray;
-  resize: none;
+  margin: 5px;
+  padding: 5px;
+  width: 95%;
 }
 
-#create_card button{width: fit-content;}
+#app-form div input:focus,
+#app-form div input:hover,
+#app-form div input:active,
+#app-form footer button:focus,
+#app-form footer button:hover {
+  background: var(--color-background-highlight);
+  border: 1px solid var(--color-border-highlight);
+  color: var(--color-highlight);
+  box-shadow: var(--flashcard-box-shadow);
+}
 
-#flashcards{
+main {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  margin-top: 10px;
-  padding: 0px 10px;
 }
 
-.flashcard{
-  width: 370px;
-  height: 200px;
-  word-wrap: break-word;
-  margin: 10px; 
-  background:#fff;
+.flashcard {
+  height: 180px;
+  margin: 5px;
+  padding: 5px;
+  perspective: 1000px;
+  width: 360px;
+}
+
+.flashcard-wrapper {
   cursor: pointer;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  height: 100%;
   position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  width: 100%;
 }
 
-.flashcard h2{font-size: 1rem;}
+.flashcard-back,
+.flashcard .flashcard-flip {
+  transform: rotateY(180deg);
+  position: relative;
+  left: -10;
+  right: 0;
+}
 
-.fa-minus{
-  top: 3%;
-  right: 2%;
+.flashcard-face {
+  -webkit-backface-visibility: hidden;
+  background: var(--color-background-card);
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--flashcard-box-shadow);
+  height: 100%;
+  overflow: hidden;
   position: absolute;
-  color: #1a1a1a;
-  transition: 0.3s ease-out;
+  width: 100%;
 }
 
-.fa-minus:hover{color: red;}
+.flashcard-front,
+.flashcard-back {
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
-@media(max-width:1280px){
-  .container{width: 100%;}
+.flashcard header {
+  color: var(--color);
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  z-index: 1;
+}
+
+.flashcard header i:focus,
+.flashcard header i:hover {
+  color: var(--color-caution);
 }
 
 @media(max-width:768px){
@@ -115,6 +226,10 @@ header{background-color: #fff;}
   .flashcard{
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  main {
+    flex-flow: column nowrap;
   }
 }
 
@@ -126,7 +241,7 @@ header{background-color: #fff;}
     align-items: center;
   }
 
-  #create_card{width: 95%;}
+  #app-form{width: 95%;}
 
   .flashcard{width: 100%;}
 
