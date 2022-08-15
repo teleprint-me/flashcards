@@ -47,6 +47,7 @@ body{
   padding: 0.3125em;
   position: sticky;
   top: 0;
+  z-index: 3;
 }
 
 #app-header h1,
@@ -158,6 +159,7 @@ body{
 main {
   align-items: center;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
@@ -167,6 +169,7 @@ main {
   padding: 5px;
   perspective: 1000px;
   width: 360px;
+  z-index: 1;
 }
 
 .flashcard-wrapper {
@@ -188,7 +191,7 @@ main {
 
 .flashcard-face {
   -webkit-backface-visibility: hidden;
-  background: var(--color-background-card);
+  background: var(--flashcard-background-color);
   backface-visibility: hidden;
   border-radius: var(--border-radius);
   box-shadow: var(--flashcard-box-shadow);
@@ -207,12 +210,16 @@ main {
   justify-content: center;
 }
 
+.flashcard-back {
+  font-size: var(--font-size-small);
+}
+
 .flashcard header {
   color: var(--color);
   position: absolute;
   top: 25px;
-  right: 10px;
-  z-index: 1;
+  right: 15px;
+  z-index: 2;
 }
 
 .flashcard header i:focus,
