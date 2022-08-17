@@ -1,0 +1,197 @@
+[
+    {
+      "question": "What does Service Design cover?",
+      "answer": "Service Design covers the fundamentals of designing services and processes."
+    },
+    {
+        "question": "What are the five key aspects of Service Design?",
+        "answer": "Designing the service solution, Management information systems and tools, Technology, Processes, and Measurements and metrics."
+    },
+    {
+        "question": "What does the Service Level Management process focus on?",
+        "answer": "Service Level Management (SLM) focuses on researching and understanding requirements."
+    },    {
+        "question": "Agreed upon targets are often outlined in what type of agreement?",
+        "answer": "Service Level Agreements (SLAs)."
+    },
+    {
+        "question": "Monitoring, Measuring, and Reporting on SLAs provides close links to which ITIL Service category?",
+        "answer": "Continual Service Improvement (CSI)."
+    },
+    {
+        "question": "SLAs are agreements to provide specific services at a defined level of what for a specific price?",
+        "answer": "Warranty."
+    },
+    {
+        "question": "SLAs work with which Warranty processes to ensure service commitments are met?",
+        "answer": "Capacity Management, Availability Management, Security Management, and Service Continuity Management."
+    },
+    {
+        "question": "What does Service Catalog Management ensure?",
+        "answer": "Accuracy and Availability are essential. An accurate and up-to-date service catalog is available to all parties authorized to see it. All parts of IT Service Management, as well as customers and users, use the service catalog."
+    },
+    {
+        "question": "The Service Catalog generally comprises which two views?",
+        "answer": "A Business Service view that is visible to the customer and a Technical Service view that is visible only to IT personnel."
+    },
+    {
+        "question": "What does Availability Management ensure?",
+        "answer": "Availability Management ensures Infrastructure, tools, roles, etcetera, are appropriate for the agreed targets. It also works with the design teams to ensure that availability is designed into services."
+    },
+    {
+        "question": "What are the two approaches used to identify which Vital Business Functions (VBFs) IT services support?",
+        "answer": "Prevention and Recovery. [Prevention] ensures that unavailability never happens. [Recovery] develops plans to restore service rapidly in the event of an outage."
+    },
+    {
+        "question": "What does IT Service Continuity Management (ITSCM) ensure?",
+        "answer": "ITSCM ensures the overall continuity of the business."
+    },
+    {
+        "question": "How is ITSCM defined?",
+        "answer": "ITCSM is defined as the process responsible for managing risks that could negatively impact IT services."
+    },
+    {
+        "question": "The use of the term ITSCM shows that there is a what type of corresponding process?",
+        "answer": "The Business Continuity Management (BCM) process."
+    },
+    {
+        "question": "ITSCM must work closely with BCM to perform what two types of analysis?",
+        "answer": "Risk Analysis and Business Impact Analysis (BIA)."
+    },
+    {
+        "question": "What is responsible for development and deployment of the service continuity plan?",
+        "answer": "IT Service Continuity Management (ITSCM)."
+    },
+    {
+        "question": "What are the four stages in the ITSCM life cycle process?",
+        "answer": "Initiation, Requirements and Strategy, Implementation, and Ongoing Operation."
+    },
+    {
+        "question": "What does Supplier Management ensure?",
+        "answer": "Alignment of contracts with the needs of the business and suppliers are meeting their commitments."
+    },
+    {
+        "question": "The supplier and contract management information system (SCMIS) holds which details?",
+        "answer": "Supplier and Contract details."
+    },
+    {
+        "question": "Design coordination handles managing resources needed by which phase?",
+        "answer": "Service Design."
+    },
+    {
+        "question": "What does Capacity Management ensure?",
+        "answer": "ITIL Capacity Management ensures adequate capacity is available at all times to meet the agreed needs of the business in a cost-effective manner."
+    },
+    {
+        "question": "The Capacity Management process works closely with which Service Design process?",
+        "answer": "Service Level Management."
+    },
+    {
+        "question": "What are three subprocesses of Capacity Management?",
+        "answer": "Business Capacity Management, Service Capacity Management, and Component Capacity Management."
+    },
+    {
+        "question": "What are the five terms of Capacity Management?",
+        "answer": "Component, Capacity Plan, Capacity Report, Capacity Management Information System, and Performance."
+    },
+    {
+        "question": "What is a Component?",
+        "answer": "A component is the underlying structure behind a service."
+    },
+    {
+        "question": "What does a Capacity Plan contain?",
+        "answer": "Different scenarios for predicted business demand and offers costed options for delivering the service-level targets as specified."
+    },
+    {
+        "question": "What is a Capacity Report and what does it provide?",
+        "answer": "A document that provides other IT management with data regarding service and resource usage and performance."
+    },
+    {
+        "question": "What is a CMIS and what is it used for?",
+        "answer": "The Capacity Management Information System (CMIS) is a virtual repository and is used to store capacity data."
+    },
+    {
+        "question": "What is Performance in the Capacity Management process?",
+        "answer": "Performance is how quickly a system responds to requests."
+    },
+    {
+        "question": "What is the purpose of Capacity Management?",
+        "answer": "To determine how much capacity should be provided based on the information from demand management regarding what should be provided."
+    },
+    {
+        "question": "Can you name at least four Capacity Management sub-processes?",
+        "answer": "Business Capacity Management, Service Capacity Management, Component Capacity Management, and Capacity Management Reporting."
+    },
+    {
+        "question": "What is Business Capacity Management?",
+        "answer": "This sub-process turns the needs of the business into IT Service Requirements. This sub-process works with Demand Management to ensure that the service is meeting business needs."
+    },
+    {
+        "question": "What is Service Capacity Management?",
+        "answer": "This sub-process focuses on the operation of the service. This sub-process focuses solely on the service itself unlike the Component Capacity Management sub-process."
+    },
+    {
+        "question": "What is Component Capacity Management?",
+        "answer": "Component Capacity Management focuses on technology that provides performance and capacity to IT services. This sub-process requires knowledge of how each component individually contributes to service performance."
+    },
+    {
+        "question": "What is Capacity Management Reporting?",
+        "answer": "This sub-process gathers and provides other stages with the data related to service capacity, service usage, and service performance. The output of this sub-process is the Service Capacity Report."
+    },
+    {
+        "question": "Which sub-process outputs the Service Capacity Report?",
+        "answer": "The Capacity Management Reporting sub-process."
+    },
+    {
+        "question": "What is the goal for ITIL Information Security Management (ISM)?",
+        "answer": "To align IT and Business Security and ensure that Information Security is effectively managed in all Service and Service Management activities."
+    },
+    {
+        "question": "What are the objectives of Information Security Management?",
+        "answer": "To ensure that information is Available, Observed, Complete and Accurate, and Business Transactions can be trusted (Authenticity and Non-Repudiation)."
+    },
+    {
+        "question": "What is the Information Security Policy in ISM?",
+        "answer": "An overarching security policy for your company that has the full support of top executive IT and business management."
+    },
+    {
+        "question": "What is the Information Security Management System (ISMS) in ISM?",
+        "answer": "The set of policies put in place to manage security and risk across a company. ITIL suggests that your ISMS should address The Four Ps: People, Process, Products, and Partners."
+    },
+    {
+        "question": "What five key elements should a ISO 27001 ISMS Framework address?",
+        "answer": "Management, Planning, Implementation, Evaluation, and Maintenance."
+    },
+    {
+        "question": "What is a Security Management Information System (SMIS)?",
+        "answer": "A tool or repository that stores data that supports Security Management Practices. It's part of the overall Service Knowledge Management System (SKMS)."
+    },
+    {
+        "question": "Who is responsible for Information Security Management (ISM)?",
+        "answer": "A Security Manager is accountable for the ISM process. Their job is to make sure that effective security policies are created, shared, and approved. They are also responsible for overall security operations (from architecture and administration to recovery)."
+    },
+    {
+        "question": "What are the five types of Security Controls recommended by ITIL?",
+        "answer": "Preventative, Reductive, Detective, Repressive, and Corrective."
+    },
+    {
+        "question": "What is the Preventative Security Control designed for?",
+        "answer": "Prevent security incidents from happening altogether."
+    },
+    {
+        "question": "What is the Reductive Security Control designed for?",
+        "answer": "Reduce the impact of incidents that do occur."
+    },
+    {
+        "question": "What is the Detective Security Control designed for?",
+        "answer": "Identify a risk or threat as quickly as possible."
+    },
+    {
+        "question": "What is the Repressive Security Control designed for?",
+        "answer": "Repress an attack through mitigation or counter-attacks as quickly as possible."
+    },
+    {
+        "question": "What is the Corrective Security Control designed for?",
+        "answer": "Repair any damage caused by an error or incident."
+    }
+]
