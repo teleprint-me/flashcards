@@ -1,0 +1,134 @@
+[
+  {
+    "question": "What is ITIL?",
+    "answer": "Information Technology Infrastructure Library (ITIL) is a framework for setting best practices for delivering IT services. It has roots going back to the 1980s in the United Kingdom as a government initiative and the framework is now covered in five books that are updated periodically."
+  },
+  {
+    "question": "Why use ITIL?",
+    "answer": "ITIL standardizes the selection, planning, delivery, and support of IT services to maximize efficiency and maintain predictable levels of service."
+  },
+  {
+    "question": "What are the five core components in ITIL?",
+    "answer": "Deliver maximum value to customers, Optimize resources and capabilities, Offer services that are useful and reliable, Planning processes with specific goals in mind, and Define roles clearly for each task."
+  },
+  {
+    "question": "What does the term Capabilities mean?",
+    "answer": "The specialized skills or abilities an organization applies to resources in order to create value."
+  },
+  {
+    "question": "What does the term Functions mean?",
+    "answer": "Self-contained subsets of an organization intended to accomplish specific tasks. They usually take the form of a group of people and the tools they use."
+  },
+  {
+    "question": "What does the term Processes mean?",
+    "answer": "Structured sets of activities designed to achieve a specific objective. The four basic characteristics of processes are: They transform inputs into outputs, They deliver results to a specific customer or stakeholder, They are measurable, and They are triggered by specific events."
+  },
+  {
+    "question": "What does the term Resources mean?",
+    "answer": "The raw materials that contribute to a service, such as money, equipment, time, and staff."
+  },
+  {
+    "question": "What does the term Roles mean?",
+    "answer": "Defined collections of responsibilities and privileges. Roles may be held by individuals or teams."
+  },
+  {
+    "question": "What does the term Service Assets mean?",
+    "answer": "Also known just as assets, these refer to the resources and capabilities that a service provider must allocate to offer a service."
+  },
+  {
+    "question": "What does the term Service Management mean?",
+    "answer": "Specialized capabilities for delivering value to customers in the form of services."
+  },
+  {
+    "question": "What does the term Services mean?",
+    "answer": "A means of delivering value to customers without requiring them to own specific costs and risks."
+  },
+  {
+    "question": "What does the term Value, Utility, and Warranty mean?",
+    "answer": "Services must offer both Utility and Warranty to have value. Utility (fitness for purpose) refers to the ability of the service to remove constraints or increase the performance of the customer. Warranty (fitness for use) is the ability of the service to operate reliably."
+  },
+  {
+    "question": "What does the acronym KPI stand for?",
+    "answer": "Key Performance Indicator."
+  },
+  {
+    "question": "What are the five elements in the ITIL Service life cycle?",
+    "answer": "Service Strategy, Service Design, Service Transition, Service Operation, and Continual Service Improvement."
+  },
+  {
+    "question": "What is the purpose of Service Strategy?",
+    "answer": "To provide a strategy for the service life cycle."
+  },
+  {
+    "question": "What are the processes for Service Strategy?",
+    "answer": "Financial Management, Service Portfolio Management, Demand Management, Business Management, and Strategy Management."
+  },
+  {
+    "question": "What is Service Design?",
+    "answer": "The design of services and all supporting elements for introduction into a live environment."
+  },
+  {
+    "question": "What are the seven processes for Service Design?",
+    "answer": "Service Catalog Management, Service Level Management, Availability Management, Capacity Management, Service Continuity Management, IT Security Management, and Supplier Management."
+  },
+  {
+    "question": "What are The Four Ps of Service Design?",
+    "answer": "People, Processes, Products, and Partners."
+  },
+  {
+    "question": "Which life cycle phases do the Availability and Capacity Management processes belong to?",
+    "answer": "Service Design."
+  },
+  {
+    "question": "What are the practices in Service Transition?",
+    "answer": "To build and deploy IT services while ensuring changes to Services and Service Management processes are carried out in a coordinated way."
+  },
+  {
+    "question": "What are the seven processes in Service Transition?",
+    "answer": "Change Management, Asset and Configuration Management, Release and Deployment Management, Transition Planning and Support (Project Management), Service Validation and Testing, Evaluation, and Knowledge Management."
+  },
+  {
+    "question": "What are the practices in Service Operations?",
+    "answer": "Some practices include fulfilling user requests, resolving service failures, fixing problems, and carrying out routine operational tasks. This is the only category of the five that has functions as well as processes."
+  },
+  {
+    "question": "What are the processes and functions in Service Operations?",
+    "answer": "Event Management (process), Incident Management (process), Request Fulfillment (process), Access Management (process), Problem Management (process), IT Operations Management (function), Service Desk (function), Application Management (function), and Technical Management (function)."
+  },
+  {
+    "question": "What are the principles for Continual Service Improvement?",
+    "answer": "To use methods from quality management to learn from past successes and failures. It aims to be inline with the concept of continual improvement adopted in ISO 2000. There is only one process in this area and it has seven steps."
+  },
+  {
+    "question": "What are the processes for Continual Service Improvement?",
+    "answer": "It is one 7 Step Process for Improvement. The 7 steps are Identifying improvement strategies, Defining what will be measured, Gathering data, Processing data, Analyzing data, Presenting and using the information drawn from the data, and Using the information to improve."
+  },
+  {
+    "question": "What does RACI stand for in the RACI Matrix?",
+    "answer": "Responsible (Who does the work?), Accountable (Who is responsible for completing the task?), Consulted (Who provides information for the project?), and Informed (Who is kept informed of progress?)."
+  },
+  {
+    "question": "What variation of the RACI Matrix is used by the Project Management Institute?",
+    "answer": "RSI: Responsible, Sponsor, and Informed."
+  },
+  {
+    "question": "What other variations are there for RACI Matrix?",
+    "answer": "RASCI: with the 'S' standing for 'Support', RACIO: with the 'O' standing for 'Out of the Loop' or 'Omitted', and RACI-VS: with the 'V' standing for 'Verify' and the 'S' for 'Signatory'."
+  },
+  {
+    "question": "What are SLAs?",
+    "answer": "A Service Level Agreement (SLA) is a documented agreement between a service provider and a customer that identifies both the services required and the expected level of service. "
+  },
+  {
+    "question": "What are OLAs?",
+    "answer": "A Operational Level Agreement (OLA) is a documented agreement that a service provider defines for internal users to meet SLAs."
+  },
+  {
+    "question": "What are UCs?",
+    "answer": "Underpinning Contracts are agreements that are used to track performance between an external service provider and a vendor."
+  },
+  {
+    "question": "What is the difference between SLA and OLA?",
+    "answer": "The SLA is external and outlines the Service Agreement between the Service Provider and Customer. The OLA is internal and outlines the Operational Agreement between the Service Provider and the internal groups within the organization."
+  }
+]

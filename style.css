@@ -211,7 +211,7 @@ main {
 }
 
 .flashcard-back {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-regular);
 }
 
 .flashcard header {

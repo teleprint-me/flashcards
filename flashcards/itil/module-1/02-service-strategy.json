@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is the purpose of Service Strategy?",
+    "answer": "To provide a strategy for the service life cycle."
+  },
+  {
+    "question": "What are the processes for Service Strategy?",
+    "answer": "Financial Management, Service Portfolio Management, Demand Management, Business Management, and Strategy Management."
+  },
+  {
+    "question": "What is Service Portfolio Management?",
+    "answer": "A method to dynamically and transparently govern resource investment."
+  },
+  {
+    "question": "What is the goal of Service Portfolio Management?",
+    "answer": "To maximize value to the business while managing risks and costs."
+  },
+  {
+    "question": "What process does Service Portfolio Management cooperate with for evaluating proposed services?",
+    "answer": "It cooperates with Change Management in the Service Transition life cycle."
+  },
+  {
+    "question": "What does Financial Management ensure?",
+    "answer": "It ensures we track and associate IT investment and spending with the services provided."
+  },
+  {
+    "question": "What are the three major activities in Financial Management?",
+    "answer": "Accounting, Budgeting, and Charging. The 'ABCs' of financial management."
+  },
+  {
+    "question": "What is the purpose of Demand Management?",
+    "answer": "To detect and influence the demand that customers have on IT services. To understand, anticipate, and influence customer demand for services."
+  },
+  {
+    "question": "Which Service Category seeks to form a relationship with customers to understand their needs?",
+    "answer": "Business Relationship Management."
+  },
+  {
+    "question": "Which life cycle phases do the Financial and Demand Management process belong to?",
+    "answer": "Service Strategy."
+  },
+  {
+    "question": "What three main actions involve Demand Management?",
+    "answer": "Analyzing current customer usage of IT services, Anticipating future customer demands for IT services, and Influencing consumption as necessary by financial or technical means."
+  },
+  {
+    "question": "Which is the most important key performance indicator (KPI) in Business Management?",
+    "answer": "Customer Satisfaction."
+  }
+]
