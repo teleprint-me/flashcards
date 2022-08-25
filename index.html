@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+    <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
@@ -13,9 +14,11 @@
 </head>
 <body>
 
-  <header id="app-header">
-    <h1>Flashcards</h1>
-    
+  <header id="app-navigator">
+    <h1>
+      <a href="/portfolio.html">teleprint.me</a>
+    </h1>
+
     <nav>
       <input type="file" id="app-main-import-json" name="Import" accept=".json" hidden>
       <button id="app-main-import">Import</button>
@@ -27,22 +30,18 @@
 
   <div id="app-form">
     <header>
-      <h2>New Flashcard</h2>
       <i id="app-form-hide" class="bx bxs-x-circle"></i>
     </header>
 
     <div>
-      <label for="app-form-question">Question</label>
-      <input id="app-form-question" spellcheck="true" required/>
+      <input id="app-form-question" spellcheck="true" placeholder="question" required/>
     </div>
     
     <div>  
-      <label for="app-form-answer">Answer</label>
-      <input id="app-form-answer" spellcheck="true" required/>
+      <input id="app-form-answer" spellcheck="true" placeholder="answer" required/>
     </div>
     
     <footer>
-      <label for="app-form-save">Save</label>
       <button id="app-form-save">Flash Card</button>
     </footer>
   </div>

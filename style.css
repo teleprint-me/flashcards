@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
+/* primary: bright, secondary: light, tertiary: dark */
 :root {
-  --border-radius: 0.3125em; /* 5px */
-
-  --flashcard-background-color: rgb(50, 50, 50);
-  --flashcard-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
-
-  --color-background: rgb(30, 30, 30);
-  --color-background-highlight: rgb(240, 240, 240);
-  --color: rgb(240, 240, 240);
-  --color-highlight: rgb(30, 30, 30);
-  --color-border: lightgray;
-  --color-border-highlight: rgb(75, 75, 75);
-  --color-caution: rgb(255, 0, 0);
-
-  --font-name: "Noto Sans Mono";
+  --primary: lightgray;
+  --secondary: orange;
+  --warning: yellow;
+  --danger: red;
+  --background-primary: rgb(30, 30, 30);
+  --background-secondary: rgb(50, 50, 50);
+  --background-tertiary: rgb(75, 75, 75);
+  --border-primary: 1px solid var(--background-tertiary);
+  --border-secondary: 1px solid var(--primary);
+  --border-tertiary: 1px solid var(--secondary);
+  --border-danger: 1px solid var(--danger);
+  --border-radius: 0.3125em;
+  --box-shadow: 1px 1px 4px 2px rgba(50, 50, 50, 0.2);
+  --font-primary: "Noto Sans Mono";
+  --font-secondary: "Roboto Mono", monospace;
+  --font-tertiary: "Rubik Mono One", sans-serif;
   --font-family: "Noto Sans Mono", Monospace, Arial, Helvetica, Times;
-  --font-size-small: 0.75em; /* 12px */
-  --font-size-regular: 0.875em; /* 14px */
-  --font-size-header: 1em; /* 16px */
-
-  --screen-min-width: 48em; /* 768px */
+  --font-size-small: 0.75em;
+  --font-size-regular: 0.875em;
+  --font-size-header: 1em;
+  --screen-max-width: 48em;
+  --duration: 500ms;
 }
 
 * {
@@ -29,63 +32,88 @@
   padding: 0;
 }
 
-body{
-  background: var(--color-background);
-  color: var(--color);
+body {
+  background: var(--background-primary);
+  color: var(--primary);
   font-family: var(--font-family);
   font-size: var(--font-size-regular);
 }
 
-#app-header {
+#app-navigator {
   align-items: center;
-  background-color: var(--color-background);
-  border-bottom: 1px solid var(--color);
-  display: flex;
-  left: 0;
+  background-color: var(--background-secondary);
+  border-bottom: var(--border-primary);
+  border-radius: var(--border-radius);
   min-height: 3.125em;
-  overflow: none;
   padding: 0.3125em;
-  position: sticky;
-  top: 0;
-  z-index: 3;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-#app-header h1,
-#app-header nav {
-  flex: auto;
+#app-navigator h1,
+#app-navigator nav {
+  flex: 1 1;
 }
 
-#app-header h1 {
+#app-navigator h1 {
   justify-content: start;
 }
 
-#app-header nav {
+#app-navigator h1 a {
+  border: none;
+  color: var(--primary);
+  outline: none;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: all var(--duration) ease-in-out;
+}
+
+#app-navigator h1 a:hover,
+#app-navigator h1 a:focus,
+#app-navigator h1 a:active {
+  color: var(--secondary);
+}
+
+#app-navigator nav {
   display: flex;
   justify-content: end;
 }
 
-#app-header button {
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
+#app-navigator button {
+  background: var(--background-secondary);
+  border: var(--border-primary);
   border-radius: var(--border-radius);
-  color: var(--color);
+  color: var(--primary);
   cursor: pointer;
   margin: 5px;
   outline: none;
   padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all var(--duration) ease-in-out;
+  outline: none;
 }
 
-#app-header button:hover{
-  background: var(--color-background-highlight);
-  color: var(--color-highlight);
+#app-navigator button:hover,
+#app-navigator button:focus,
+#app-navigator button:active {
+  border: var(--border-tertiary);
+  color: var(--secondary);
+}
+
+#app-navigator button:hover:last-child,
+#app-navigator button:focus:last-child,
+#app-navigator button:active:last-child {
+  border: var(--border-danger);
+  color: var(--danger);
 }
 
 #app-form {
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
+  background: var(--background-secondary);
+  border: var(--border-primary);
   border-radius: var(--border-radius);
-  box-shadow: var(--flashcard-box-shadow);
-  color: var(--color);
+  box-shadow: var(--box-shadow);
+  color: var(--primary);
   display: none;
   flex-flow: column nowrap;
   height: 210px;
@@ -93,38 +121,28 @@ body{
   margin-top: 20px;
   overflow: hidden;
   padding: 10px;
-  width: 370px;
+  width: 360px;
 }
 
 #app-form header {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-}
-
-#app-form header h2,
-#app-form header i {
-  flex: auto;
-}
-
-#app-form header h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 5px 0;
 }
 
 #app-form header i {
   align-items: center;
   display: flex;
-  flex: 0 0 10%;
-  height: 25px;
+  flex: 0 0 5%;
   justify-content: center;
   font-size: var(--font-size-header);
-  color: var(--color);
+  color: var(--primary);
 }
 
 #app-form header i:hover {
-  color: var(--color-caution);
+  color: var(--danger);
 }
 
 #app-form div,
@@ -135,13 +153,15 @@ body{
 
 #app-form div input,
 #app-form footer button {
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
+  background: var(--background-tertiary);
+  border: none;
   border-radius: var(--border-radius);
-  color: var(--color);
+  color: var(--primary);
   font-family: inherit;
   margin: 5px;
+  outline: var(--primary) solid thin;
   padding: 5px;
+  transition: all var(--duration) ease-in-out;
   width: 95%;
 }
 
@@ -150,10 +170,10 @@ body{
 #app-form div input:active,
 #app-form footer button:focus,
 #app-form footer button:hover {
-  background: var(--color-background-highlight);
-  border: 1px solid var(--color-border-highlight);
-  color: var(--color-highlight);
-  box-shadow: var(--flashcard-box-shadow);
+  background: var(--background-secondary);
+  box-shadow: var(--box-shadow);
+  color: var(--secondary);
+  outline: var(--secondary) solid thin;
 }
 
 main {
@@ -191,10 +211,10 @@ main {
 
 .flashcard-face {
   -webkit-backface-visibility: hidden;
-  background: var(--flashcard-background-color);
+  background: var(--background-secondary);
   backface-visibility: hidden;
   border-radius: var(--border-radius);
-  box-shadow: var(--flashcard-box-shadow);
+  box-shadow: var(--box-shadow);
   height: 100%;
   overflow: hidden;
   position: absolute;
@@ -215,7 +235,7 @@ main {
 }
 
 .flashcard header {
-  color: var(--color);
+  color: var(--primary);
   position: absolute;
   top: 25px;
   right: 10px;
@@ -224,7 +244,7 @@ main {
 
 .flashcard header i:focus,
 .flashcard header i:hover {
-  color: var(--color-caution);
+  color: var(--danger);
 }
 
 @media(max-width:768px){
@@ -241,15 +261,19 @@ main {
 }
 
 @media(max-width:480px){
-  #header{
+  #app-navigator {
     padding: 20px;
     gap: 10px;
     flex-direction: column;
     align-items: center;
   }
 
-  #app-form{width: 95%;}
+  #app-form {
+    width: 95%;
+  }
 
-  .flashcard{width: 100%;}
+  .flashcard {
+    width: 100%;
+  }
 
 }
